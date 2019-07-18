@@ -6,5 +6,10 @@ pipeline {
         git(url: 'https://github.com/rohanya/first-web-application.git', branch: 'master', credentialsId: 'rohanya')
       }
     }
+    stage('Build') {
+      steps {
+        sh 'sh "mvn clean"'
+      }
+    }
   }
 }
