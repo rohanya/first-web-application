@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Code Analysis') {
       steps {
-        withSonarQubeEnv('SonarQube-Scanner') {
+        withSonarQubeEnv('jenkins') {
           sh 'mvn clean package sonar:sonar'
         }
       }
